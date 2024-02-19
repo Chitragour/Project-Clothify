@@ -3,12 +3,13 @@
     padding: 1rem;
     color: black;
     text-align: center;
-    position:relative;
+    
+    position:sticky;
      /* margin-top: auto;  */
      /* FA1111 */
      bottom: 0;
      width: 100%;
- 
+     
   }
   
   .footer-content {

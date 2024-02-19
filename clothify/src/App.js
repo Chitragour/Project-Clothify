@@ -25,6 +25,7 @@ import PickUpPersonfeedback from './Components/PickUpPersonfeedback';
 import UserLogin from './Components/UserLogin';
 import { Bounce, ToastContainer } from 'react-toastify';
 import AddPickup from './Components/AddPickUp';
+import ProtectedRoutes from './Components/ProtectedRoutes';
 
 
 function App() {
@@ -38,18 +39,26 @@ function App() {
     <Route path="/forgetpassword" element={<ForgetPass/>} />
     <Route path="/" element={<Home/>} />
     <Route path="/about" element={<About/>} />
-    <Route path="/order" element={<Order/>} />
+    <Route
+  path="/order"
+  element={
+    <ProtectedRoutes
+      element={<Order />}
+      allowedRoles={["user"]}
+    />
+  }
+/>
     <Route path="/contact" element={<Contact/>} />
-    <Route path="/profile" element={<UserProfile/>} />
+    <Route path="/profile" element={<ProtectedRoutes element={<UserProfile/>} allowedRoles={["user","admin"]}/>} />
     <Route path="/changePassword" element={<ChangePassword/>} />
     <Route path="/signout" element={<SingOut/>} />
-    <Route path="/dashBoard" element={<DashBoard/>} />
+    <Route path="/dashBoard" element={<ProtectedRoutes element={<DashBoard/>} allowedRoles={["admin"]} />} />
     <Route path="/pickupPersonLogin" element={<PickUpPersonLogin/>}  />
     <Route path="/pickupPerson" element={<PickUpPerson/>}  />
     <Route path="/coupons" element={<Coupons/>}  />
-    <Route path="/allocatedCoupons" element={<AllotedCoupons/>}  />
-    <Route path="/PickUpPersonfeedback" element={<PickUpPersonfeedback/>}  />
-    <Route path="/addPickup" element={<AddPickup/>}  />
+    <Route path="/allocatedCoupons" element={<ProtectedRoutes element={<AllotedCoupons/>} allowedRoles={["user"]}/>}  />
+    <Route path="/PickUpPersonfeedback" element={<ProtectedRoutes element={<PickUpPersonfeedback/>} allowedRoles={["user"]}/>}  />
+    <Route path="/addPickup" element={<ProtectedRoutes element={<AddPickup/>} allowedRoles={["admin"]}/>}  />
   </Routes>
   <Footer></Footer>
   

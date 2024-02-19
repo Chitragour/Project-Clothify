@@ -1,14 +1,26 @@
-
-#a{
-    color: rgb(249, 36, 36);
-}
-.allocatedcoupon-table {
-   font-size: 20px;
-    width: 80%;
-    margin: 0 0;
-    height: 70%;
-    /* border-collapse: collapse; */
+.AllocatedMain{
+    
+    /* background-size:     cover;                     */
+  
+    /* background-size: contain; */
+    
     /* border: 2px solid black; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* background-color: yellow; */
+    justify-content: space-between;
+    align-items: center;
+}
+#d{
+    
+}
+.order-table {
+    width: 40%;
+    margin: 0 0;
+    height: 50%;
+    /* border-collapse: collapse; */
+    border: 2px solid black;
 }
 .order-table th,
 .order-table td {
@@ -24,11 +36,11 @@
 .order-table td {
     text-align: center;
 }
-.allocatedcoupon-page {
+.order-page {
     text-align: center;
     padding: 20px;
-    height: 200px;
-    /* border: 2px solid  black; */
+    height: 500px;
+    border: 2px solid  black;
 }
 .man{
 
