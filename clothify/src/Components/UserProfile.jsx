@@ -1,6 +1,7 @@
 import { useState } from "react"
 import '../Css/Profile.css';
 import AllotedCoupons from "./AllocatedCoupons";
+import GetOrder from "./GetOrder";
 import { cilAlignCenter } from "@coreui/icons";
 import { toast,Bounce } from 'react-toastify';
 export default function UserProfile(){
@@ -39,6 +40,7 @@ export default function UserProfile(){
                   Change Password?
                 </a>
               </div>
+              <GetOrder></GetOrder>
               <AllotedCoupons></AllotedCoupons>
 
               

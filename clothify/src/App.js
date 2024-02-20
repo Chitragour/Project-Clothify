@@ -14,7 +14,7 @@ import UserProfile from './Components/UserProfile';
 import ChangePassword from './Components/ChangePassword';
 import SingOut from './Components/SignOut';
 import DashBoard from './Components/DashBoard';
-
+import GetOrder from './Components/GetOrder';
 import PickUpPersonLogin from './Components/PickUpPersonLogin';
 import PickUpPerson from './Components/PickUpPerson';
 import Coupons from './Components/Coupons';
@@ -26,6 +26,7 @@ import UserLogin from './Components/UserLogin';
 import { Bounce, ToastContainer } from 'react-toastify';
 import AddPickup from './Components/AddPickUp';
 import ProtectedRoutes from './Components/ProtectedRoutes';
+import EditOrder from './Components/EditOrder';
 
 
 function App() {
@@ -56,6 +57,8 @@ function App() {
     <Route path="/pickupPersonLogin" element={<PickUpPersonLogin/>}  />
     <Route path="/pickupPerson" element={<PickUpPerson/>}  />
     <Route path="/coupons" element={<Coupons/>}  />
+    <Route path="/editOrder" element={<ProtectedRoutes element={<EditOrder/>} allowedRoles={["user"]}/>}  />
+    <Route path="/getOrderByUid" element={<ProtectedRoutes element={<GetOrder/>} allowedRoles={["user"]}/>}  />
     <Route path="/allocatedCoupons" element={<ProtectedRoutes element={<AllotedCoupons/>} allowedRoles={["user"]}/>}  />
     <Route path="/PickUpPersonfeedback" element={<ProtectedRoutes element={<PickUpPersonfeedback/>} allowedRoles={["user"]}/>}  />
     <Route path="/addPickup" element={<ProtectedRoutes element={<AddPickup/>} allowedRoles={["admin"]}/>}  />

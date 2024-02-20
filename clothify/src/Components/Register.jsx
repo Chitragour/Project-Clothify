@@ -39,8 +39,14 @@ else if((""+phone).length<10 || (""+phone).length>13 ){
         try {
           axios.post(`${URL}/register`,body).then((response)=>{
             console.log(response.data)
-            toast.success("Successfully Register")
-            navigate("/userlogin")
+            if(response.status==204){
+              toast.warning("Already Register")
+            }
+            else{
+              toast.success("Successfully Register")
+              navigate("/userlogin")
+            }
+           
           }).catch() 
         } catch (e) {
           
