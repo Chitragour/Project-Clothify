@@ -9,7 +9,7 @@ import { useLocation } from "react-router-dom";
 const Coupons =()=>{
         const location=useLocation()
         const[brand,setBrand]=useState("")
-        const[discount,setDiscount]=useState(0)
+        const[discount,setDiscount]=useState(1)
         const[validity,setValidity]=useState()
         const navigate=useNavigate();
         
@@ -21,6 +21,9 @@ const Coupons =()=>{
         }
         else if(discount.length==0){
             toast.warning("Please Enter The Discount")
+        }
+        else if(discount==0){
+          toast.warning("Please Enter Discount Greater Than 0")
         }
         else{
          
