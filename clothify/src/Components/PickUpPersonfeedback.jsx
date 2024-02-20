@@ -51,7 +51,7 @@ const PickUpPersonfeedback =()=>{
     
     return(
         <div >
-        <div className="app-box app-feedback-form  "  style={{alignSelf:'center',margin:'auto',marginTop:'10px',marginBottom:"10px"}}>
+        <div className="app-box app-feedback-form  "  style={{alignSelf:'center',margin:'auto',marginTop:'10px',marginBottom:"10px",height:"500px"}}>
                 <h2 className="app-heading1">FeedBack</h2><br></br>
                     <form onSubmit={handleSubmit} className="app-feed-form"> 
                    

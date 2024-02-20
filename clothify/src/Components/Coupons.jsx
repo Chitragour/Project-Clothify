@@ -75,7 +75,7 @@ const Coupons =()=>{
                   <div className="mb-3">
                     <label htmlFor="name" className="form-label"><b>Discount:</b></label>
                     <input
-                    min={0}
+                    min={1}
                     max={100}
                       type="number"
                       className="form-control"

@@ -78,7 +78,7 @@ export default function ForgetPass(){
                 />
 
                  <br></br>
-                 <b>Password: </b>
+                 <b>NewPassword: </b>
                  <br></br>
                  <input
                   type="password"

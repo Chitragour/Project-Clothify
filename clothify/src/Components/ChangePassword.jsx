@@ -70,8 +70,9 @@ return(
                 />
 
                <br></br>
+               <div><center> <button   className="btn btn-danger" onClick={ChangePass} >Reset Password</button></center></div>
               </div>
-             <center> <button  style={{marginTop:"200px"}}  className="btn btn-danger" onClick={ChangePass} >Reset Password</button></center>
+             
               
     </div>
 )
