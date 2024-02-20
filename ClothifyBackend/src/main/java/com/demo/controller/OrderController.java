@@ -5,7 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -56,4 +58,29 @@ public class OrderController {
 	 return ResponseEntity.ok(ulist);
 	 
    }
+	@GetMapping("/orderById/{uid}")
+	public  ResponseEntity<List<Order>> getOrderById(@PathVariable int uid){
+	   
+	 List<Order> ulist=service.getAllOrder(uid);
+	 System.out.println(ulist);
+	 return ResponseEntity.ok(ulist);
+	 
+   }
+	@PutMapping("/updateOrder/{oid}")
+	   public ResponseEntity<?> UpdateOrder(@PathVariable int oid,@RequestBody Order order){
+		         System.out.println(oid);
+		        service.updateOrderById(oid,order);
+		  
+		   return ResponseEntity.noContent().build();
+	   }
+	@DeleteMapping("/deleteOrder/{uid}")
+	public  ResponseEntity<?> deleteOrderById(@PathVariable int uid){
+	   
+	 service.deleteOrder(uid);
+	
+	 return ResponseEntity.ok("");
+	 
+	}
+	
+	
 }

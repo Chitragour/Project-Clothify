@@ -29,6 +29,8 @@ public interface UserDao extends JpaRepository<User, Integer> {
      
     @Query(value=" select u.uid,username,name,email,phone_no,address,oid,no_of_items,pickup_date ,pickup_description from user u  join pickuporder p where u.uid=p.uid",nativeQuery = true)
 	List<Object> getOrders();
+    @Query(value="select * from user  where username=:username ",nativeQuery = true)
+	User getUser(String username);
 	
    
 

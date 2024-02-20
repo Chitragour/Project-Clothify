@@ -33,5 +33,21 @@ public class OrderServiceImpl implements OrderService {
 		// TODO Auto-generated method stub
 		return orderdao.getallorders();
 	}
+	@Override
+	public List<Order> getAllOrder(int uid) {
+		// TODO Auto-generated method stub
+		return orderdao.ordersGetById(uid);
+	}
+	@Override
+	public void deleteOrder(int uid) {
+		// TODO Auto-generated method stub
+		orderdao.deleteOrderById(uid);
+	}
+	@Override
+	public void updateOrderById(int oid,Order order) {
+		// TODO Auto-generated method stub
+		orderdao.updateOrderById(oid,order.getPickupDate(),order.getPickupDescription(),order.getNoOfItems());
+	}
+	
 
 }

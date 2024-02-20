@@ -55,6 +55,12 @@ public class UserServiceImp implements UserService{
 		// TODO Auto-generated method stub
 		return dao.getOrders();
 	}
+
+	@Override
+	public User findByUsername(String username) {
+		// TODO Auto-generated method stub
+		return dao.getUser(username);
+	}
 	
 	
 }

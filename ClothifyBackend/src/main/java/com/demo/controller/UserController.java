@@ -41,12 +41,16 @@ public class UserController {
    }
    @PostMapping("/register")
    public ResponseEntity<?> register(@RequestBody User user){
-	   
-	        User user1=service.add(user);
-	   if(user1!=null) {
-		  
-		  return ResponseEntity.ok(user1);
+	   User user1=service.findByUsername(user.getUsername());
+	   System.out.println(user);
+	   if(user1==null) {
+		     User user2=service.add(user);
+			   if(user2!=null) {
+				  
+				  return ResponseEntity.ok(user2);
+			   }
 	   }
+	   
 	   return ResponseEntity.noContent().build();
    }
    @PostMapping("/reset")
