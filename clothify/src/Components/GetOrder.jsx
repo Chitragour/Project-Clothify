@@ -39,7 +39,7 @@ const GetOrder =()=>{
       const deleteOrder=(oid)=>{
         axios.delete(`${URL}/deleteOrder/${oid}`).then((response)=>{
             console.log(response.data)
-            
+            toast.success("Order is get is got cancel")
             }).catch()
          }
          
