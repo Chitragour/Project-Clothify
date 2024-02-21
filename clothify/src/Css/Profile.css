@@ -1,11 +1,14 @@
 .profile{
-    border: 2px solid black;
-    width: 1200px;
+
+    /* border: 2px inset palevioletred; */
+
+    width: 1030px;
      height: 1200px;
-     padding: 10px;
+     padding: 100px;
      font-size: 20px;
+     margin-left: 270px;
     
     align-items: center;
    /* margin: auto,40px; */
-   margin-left: 30px;
+
 }

@@ -37,19 +37,19 @@ const Home=()=>{
           <div className="card mx-3" style={{width: "20rem",  borderRadius:"10px", height:"630px", marginLeft:"50px"}}>
           <img src={Reach} alt="Card image cap" style={{width:"100%", height:"76%"}}/>
           <div class="card-body">
-          <p class="card-text" style={{}}><h4>Connect with Us</h4><p>Join us in this journey towards a more sustainable and inclusive future
+          <p class="card-text" style={{}}><h4>Your Feedback is valuable to us</h4><p>Write to us
 
 
 
 
-<Link to="/contact" style={{alignItems:"center",display:"flex",color:"black",textDecoration:"underline"}}>Contact us</Link></p></p>
+<Link to="/contact" style={{alignItems:"center",display:"flex",color:"black",textDecoration:"underline", fontSize:"27px"}}>Feedback</Link></p></p>
           </div>
           </div>
 
          <div className="card mx-3" style={{width: "20rem",  borderRadius:"10px", height:"630px", marginLeft:"50px"}}>
-          <img src={sustainable} alt="Card image cap" style={{width:"100%", height:"150%"}}/>
+          <img src={sustainable} alt="Card image cap" style={{width:"100%", height:"170%"}}/>
           <div class="card-body">
-          <p class="card-text" style={{}}><h4>Join us in the Movement</h4><p>Exchange your clothes for coupons of well-known brands</p><Link to="/order" style={{alignItems:"center",display:"flex",color:"black",textDecoration:"underline"}}>Exchange</Link></p>
+          <p class="card-text" style={{}}><h4>Join us in the Movement</h4><p>Exchange your used clothes for great deals</p><Link to="/order" style={{alignItems:"center",display:"flex",color:"black",textDecoration:"underline",fontSize:"27px"}}>Exchange</Link></p>
           </div>
           </div>
 

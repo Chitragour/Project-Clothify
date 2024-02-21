@@ -59,10 +59,10 @@ public class OrderController {
 	 
    }
 	@GetMapping("/orderById/{uid}")
-	public  ResponseEntity<List<Order>> getOrderById(@PathVariable int uid){
+	public  ResponseEntity<List<Object>> getOrderById(@PathVariable int uid){
 	   
-	 List<Order> ulist=service.getAllOrder(uid);
-	 System.out.println(ulist);
+	 List<Object> ulist=service.getAllOrder(uid);
+	 System.out.println(ulist.toString());
 	 return ResponseEntity.ok(ulist);
 	 
    }
@@ -76,6 +76,7 @@ public class OrderController {
 	@DeleteMapping("/deleteOrder/{uid}")
 	public  ResponseEntity<?> deleteOrderById(@PathVariable int uid){
 	   
+		System.out.println(uid);
 	 service.deleteOrder(uid);
 	
 	 return ResponseEntity.ok("");

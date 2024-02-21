@@ -24,7 +24,7 @@ public interface OrderDao extends JpaRepository<Order, Integer>{
 	 @Query(value=" select u.uid,u.username,u.email,c.brand,c.validity from user u  join  coupons c where u.uid=c.uid;",nativeQuery = true)
      List<Object> getallorders();
 	 @Query(value=" select * from pickuporder where uid=:uid",nativeQuery = true)
-	   List<Order> ordersGetById(int uid);
+	   List<Object> ordersGetById(int uid);
 	 @Modifying
 	 @Transactional
 	 @Query(value=" delete from pickuporder where oid=:uid",nativeQuery = true)

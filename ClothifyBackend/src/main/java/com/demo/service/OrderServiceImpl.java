@@ -34,7 +34,7 @@ public class OrderServiceImpl implements OrderService {
 		return orderdao.getallorders();
 	}
 	@Override
-	public List<Order> getAllOrder(int uid) {
+	public List<Object> getAllOrder(int uid) {
 		// TODO Auto-generated method stub
 		return orderdao.ordersGetById(uid);
 	}

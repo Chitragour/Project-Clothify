@@ -31,7 +31,7 @@ const AllotedCoupons =()=>{
  
  <br></br>
 
- <table className="allocatedcoupon-table">
+ <table className="table table-striped">
    <thead>
      <tr>
        <th>UserName</th>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import {URL} from "../config"
-import '../Css/pickupPerson.css';
+// import '../Css/pickupPerson.css';
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 const GetOrder =()=>{
@@ -32,14 +32,15 @@ const GetOrder =()=>{
             
         }
     }
-    fetchdata()
+    
         
        },[userOrders]) 
 
       const deleteOrder=(oid)=>{
+        console.log(oid);
         axios.delete(`${URL}/deleteOrder/${oid}`).then((response)=>{
             console.log(response.data)
-            toast.success("Order is get is got cancel")
+            toast.success("Your order has been cancelled succesfully !")
             }).catch()
          }
          
@@ -50,18 +51,18 @@ const GetOrder =()=>{
       }
     return (
     <div style={{height:"620px"}}> 
-    <h2 id="A">Your Order</h2>
+    <h2 id="A">Your Orders</h2>
 
 <br></br>
      
-<table className="dashboard" >
+<table className="table table-striped">
 <thead>
  <tr>
-   <th>Date</th>
-   <th>Description</th>
-   <th>NoOfItems</th>
-   <th>Edit</th>
-   <th>Delete</th>
+   <th scope="col">Date</th>
+   <th scope="col">Description</th>
+   <th scope="col">NoOfItems</th>
+   <th scope="col">Edit</th>
+   <th scope="col">Delete</th>
 
  </tr>
 </thead>
@@ -69,19 +70,19 @@ const GetOrder =()=>{
     
  { userOrders.map((order)=>{
     return(
-     <tr key={order.oid}>
-     <td>{order.pickupDate}</td>
-     <td>{order.pickupDescription}</td>
-     <td>{order.noOfItems}</td>
+     <tr key={order[0]}>
+     <td scope="row">{order[2]}</td>
+     <td>{order[3]}</td>
+     <td>{order[1]}</td>
      <td>     
           <button 
           className="navbar-toggler" style={{padding:"10px",marginLeft:"50px",marginRight:"20px"}}
-          type="button" onClick={()=>{editOrder(order.oid)}}>Edit order</button></td>
+          type="button" onClick={()=>{editOrder(order[0])}}>Edit order</button></td>
               <td>
                    
                   <button
           className="navbar-toggler" style={{padding:"10px",marginLeft:"50px",marginRight:"20px"}}
-            onClick={()=>{deleteOrder(order.oid)}}>Cancel order</button></td>
+            onClick={()=>{deleteOrder(order[0])}}>Cancel order</button></td>
              
             </tr>
     

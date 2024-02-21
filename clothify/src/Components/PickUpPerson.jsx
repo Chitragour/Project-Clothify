@@ -74,6 +74,7 @@ const PickUpPerson =()=>{
              <h2 id="d">Authorised PickUpPerson</h2>
         <div className="pick-page">
       <br></br>
+      
       <table className="pickup-table">
         <thead>
           <tr>
