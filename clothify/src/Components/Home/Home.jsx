@@ -6,7 +6,7 @@ import Reach from '../../Images/Reach.png';
 import sustainable from '../../Images/sustainable.jpg';
 import '../../Css/Home/home.css';
 import { Link } from "react-router-dom";
-import pandalogo from '../../Images/pandalogo.png'
+
 const Home=()=>{
    return(
     <>

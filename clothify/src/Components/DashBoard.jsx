@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const DashBoard =()=>{
     const[Details,setuserDetails]=useState([]);
+    const[feedBack,setfeedBack]=useState([]);
      const navigate=useNavigate()
 
      const addPickup =()=>{navigate("/addPickup")}
@@ -15,7 +16,9 @@ const DashBoard =()=>{
     const fetchdata =async()=>{
     try {
      const response= await axios.get(`${URL}/orderDetails`)
+     const res= await axios.get(`${URL}/userfeedback`)
      console.log(response.data)
+     setfeedBack(res.data)
      setuserDetails(response.data)
     } catch (error) {
         
@@ -26,11 +29,12 @@ fetchdata()
    },[])
     return(
           <div style={{height:"620px"}}> 
-             <h2 id="A">Admin Dashboard</h2>
+             <b><h2 id="A">Admin Dashboard</h2></b>
       
       <br></br>
-                  <button style={{marginLeft:"600px"}} onClick={addPickup}> Add PickUp Person</button>
-      <table className="dashboard" >
+      <h2 id="A">Order details</h2>
+                 
+      <table className="table table-striped" >
         <thead>
           <tr>
             <th>Uid</th>
@@ -59,6 +63,36 @@ fetchdata()
           
         </tbody>
       </table>
+      <br></br>
+      <h2 id="A">PickupPerson FeedBack</h2>
+      <table className="table table-striped" >
+        <thead>
+          <tr>
+            <th>PickUpPerson Name</th>
+            <th>Feedback</th>
+            <th>Username</th>
+           
+           
+          </tr>
+        </thead>
+        <tbody>
+         {
+           feedBack.map((user)=>{
+            return (
+              <tr key={user.uid}>
+              <td>{user[0]}</td>
+              <td>{user[1]}</td>
+              <td>{user[2]}</td>
+              
+            </tr>
+            )
+            
+           })
+         }
+          
+        </tbody>
+      </table>
+       <button style={{marginLeft:"600px"}} onClick={addPickup}> Add PickUp Person</button>
         </div>
        
     )

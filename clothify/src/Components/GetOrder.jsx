@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import {URL} from "../config"
-// import '../Css/pickupPerson.css';
+import '../Css/pickupPerson.css';
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 const GetOrder =()=>{
@@ -51,7 +51,8 @@ const GetOrder =()=>{
       }
     return (
     <div style={{height:"620px"}}> 
-    <h2 id="A">Your Orders</h2>
+    <h2 id="o">Your Orders</h2>
+    <hr></hr>
 
 <br></br>
      

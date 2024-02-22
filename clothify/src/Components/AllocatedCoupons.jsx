@@ -27,9 +27,9 @@ const AllotedCoupons =()=>{
     return(
       
    <div className="allocatedcoupon-page">
-   <h4 id="a">Allocated Coupons</h4>
- 
- <br></br>
+   <h2 id="a">Alloted Coupons</h2>
+ <hr></hr>
+ {/* <br></br> */}
 
  <table className="table table-striped">
    <thead>

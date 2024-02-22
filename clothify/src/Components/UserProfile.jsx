@@ -31,7 +31,7 @@ export default function UserProfile(){
       {isSidebarOpen && (
         <div className="" >
           <br></br>
-          <h2 style={{fontFamily:"Helvetica",fontSize:"40px",color:"red"}}>User Profile</h2>
+          <b><h1 style={{fontFamily:"Helvetica",fontSize:"40px",color:"red"}}>User Profile</h1></b>
           <p>User Id: <b>{ sessionStorage['uid']  }</b></p>
           <p>Email: <b>{ sessionStorage['email']  }</b></p>
           <p>Role: <b>{ sessionStorage['role']  }</b></p>

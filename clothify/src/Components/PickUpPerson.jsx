@@ -71,24 +71,26 @@ const PickUpPerson =()=>{
     }
   return (
     <div  className="pickup" style={{height:"620px"}}> 
-             <h2 id="d">Authorised PickUpPerson</h2>
+             <h2 id="o">Authorised PickUpPerson</h2>
+             <hr></hr>
         <div className="pick-page">
       <br></br>
       
-      <table className="pickup-table">
+      <table className="table table-striped">
         <thead>
           <tr>
            
-            <th>UserName</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone No</th>
-            <th>Address</th>
+            <th  scope="col">UserName</th>
+            <th  scope="col">Name</th>
+            <th  scope="col">Email</th>
+            <th  scope="col">Phone No</th>
+            <th  scope="col">Address</th>
             
-            <th>NoOfItems</th>
-            <th>Date</th>
-            <th>Description</th>
-            
+            <th  scope="col">NoOfItems</th>
+            <th  scope="col">Date</th>
+            <th  scope="col">Description</th>
+            <th  scope="col">Receive Order</th>
+            <th  scope="col">Allot Coupons</th>
           </tr>
         </thead>
         <tbody>
@@ -116,7 +118,7 @@ const PickUpPerson =()=>{
                    
                   <button
           className="navbar-toggler" style={{padding:"10px",marginLeft:"50px",marginRight:"20px"}}
-            onClick={()=>{AllotedCoupons(user[0])}}>Give Coupons</button></td>
+            onClick={()=>{AllotedCoupons(user[0])}}>IssueCoupons</button></td>
              
             </tr>
             
